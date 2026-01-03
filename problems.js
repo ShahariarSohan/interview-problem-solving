@@ -64,7 +64,22 @@ console.log(sortedAscendingCars);
 
 //Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
 
-
+const persons = [
+  { name: "John", age: 28, gender: "male" },
+  { name: "Sarah", age: 24, gender: "female" },
+  { name: "Michael", age: 35, gender: "male" },
+  { name: "Emily", age: 30, gender: "female" },
+  { name: "David", age: 40, gender: "male" },
+];
+const searchingName = (name,changeableAge) => {
+    persons.find(person => {
+        if (person.name === name) {
+             person.age=changeableAge
+         }
+    })
+    return persons;
+}
+console.log(searchingName("John",26))
 //Create an array of numbers. Write a function that uses the reduce method to calculate the sum of all even numbers in the array.
 
 const evenNumbers = [2, 4, 6, 8, 10]
